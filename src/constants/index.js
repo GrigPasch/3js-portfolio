@@ -1,7 +1,6 @@
 import {
     mobile,
     backend,
-    creator,
     web,
     javascript,
     typescript,
@@ -15,10 +14,11 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
+    brainnest,
+    ekpa,
+    goethe,
+    kotsovolos,
+    teicm,
     carrent,
     jobit,
     tripguide,
@@ -40,26 +40,22 @@ import {
     },
   ];
   
-  const services = [
+  export const services = [
     {
       title: "Web Developer",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "React Developer",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "FrontEnd Developer",
       icon: backend,
-    },
-    {
-      title: "Content Creator",
-      icon: creator,
     },
   ];
   
-  const technologies = [
+  export const technologies = [
     {
       name: "HTML 5",
       icon: html,
@@ -114,62 +110,104 @@ import {
     },
   ];
   
-  const experiences = [
+  export const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
+      title: "BS or BSc",
+      company_name: "Technological Educational Institute of Central Macedonia",
+      icon: teicm,
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      date: "September 2012 - June 2023",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Finished my studies at the university, where among the subjects we were taught,"+
+        "we learned languages like C, C++, Java, HTML, PHP and the fundamentals of MySQL"+
+        "databases. As you can tell I preferred the web design languages and decided to pursue"+
+        "this field as my work :)",
       ],
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
+      title: "Seminar titled: Frontend development Industry training of 24hours + individual work",
+      company_name: "Brainnest",
+      icon: brainnest,
       iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
+      date: "May 2022 - June 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "This was an online seminar, held by the Brainnest company in which we learned the " +
+        "fundamentals of HTML, CSS ad Javascript. We did a project for each programming language " +
+        "and were graded for each one. The seminar was taught by Mr. Branko Popovic and was " +
+        "overall a great learning experience and really taught you to never forget the fundamentals " +
+        "and their importance even to complex projects",
       ],
     },
     {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
+      title: "Gothe - Zertifikat B2",
+      company_name: "Goethe - Institut",
+      icon: goethe,
       iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
+      date: "2021 - 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "I succeded in obtaining 3 out of the 4, sadly, Moduls of Goethe - Zertifikat B2 of German" +
+        "Language Competency",
+        "Schreiben - Writing",
+        "Lessen - Reading",
+        "Sprechen – Speaking",
+      ],
+    },
+    {
+      title: "Assistant Technician, Internship",
+      company_name: "Dixons S.E. - Kotsovolos",
+      icon: kotsovolos,
+      iconBg: "#E6DEDD",
+      date: "June 2021 - November 2021",
+      points: [
+        "This was my 6 months internship, where I assisted the technician of the store with" +
+        "various technical problems the clients were facing. I also assisted him in setting" +
+        "up desktop PCs, initializing smartphones, tablets, laptops and all sorts of equipment" +
+        "in order for them to be ready to be used the instant the customer buys them. It was a" +
+        "fun 6 month period, where I learned to collaborate with others, hear and assist clients" +
+        " needs and overall, learn how a big company works."
+      ],
+    },
+    {
+      title: "Seminar titled: Ultimate web Development for Experts with React 16, Angular 7, Vue.js 2, HTML, Javascript, JQuery and Bootstrap 4",
+      company_name: "National and Kapodistrian University of Athens",
+      icon: ekpa,
+      iconBg: "#E6DEDD",
+      date: "2019 - 2020",
+      points: [
+        "Completed the aforementioned 250 hours seminar orginised by the National and Kapodistrian University of Athens. " +
+        "In this seminar, we were taught all the technologies mentioned and were told how to use them, when to use them " +
+        "and was overall a great learning experience as well, and probably the  first reason I decided to work with React.js " +
+        "framework instead of Angular. Since then of course, I've dwelled deeper in the React system and how it works, " +
+        "learned many libraries, packages and dependencies and how and when to use them.",
+      ],
+    },
+    {
+      title: "Seminar titled: Ruby and Ruby on Rails: Web and Desktop Application Development",
+      company_name: "National and Kapodistrian University of Athens",
+      icon: ekpa,
+      iconBg: "#E6DEDD",
+      date: "2019 - 2020",
+      points: [
+        "Completed the aforementioned 138 hours seminar orginised by the National and Kapodistrian University of Athens. " +
+        "In this seminar, we were taught Ruby and RoR. We learned the fundamentals of this backend language, how to install " +
+        "it of course, to a project and how it is structured." 
+      ],
+    },
+    {
+      title: "Seminar titled: Web design and Front-End Expertise",
+      company_name: "National and Kapodistrian University of Athens",
+      icon: ekpa,
+      iconBg: "#E6DEDD",
+      date: "2018 - 2019",
+      points: [
+        "Completed the aforementioned 126 hours seminar orginised by the National and Kapodistrian University of Athens. " +
+        "In this seminar, we were taught the basics of web design. We used simple fundamental languages like HTML, CSS and " +
+        "Javascript and learned how to utilize them properly." 
       ],
     },
   ];
   
-  const testimonials = [
+  export const testimonials = [
     {
       testimonial:
         "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
@@ -196,7 +234,7 @@ import {
     },
   ];
   
-  const projects = [
+  export const projects = [
     {
       name: "Car Rent",
       description:
@@ -261,5 +299,3 @@ import {
       source_code_link: "https://github.com/",
     },
   ];
-  
-  export { services, technologies, experiences, testimonials, projects };
