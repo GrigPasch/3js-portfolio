@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unknown-property */
 
 import React, { Suspense, useEffect, useState } from "react";
@@ -7,7 +9,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("/desktop_pc/scene.gltf");
+  const computer = useGLTF("/globe/scene.gltf");
 
   return (
     <mesh>
@@ -23,8 +25,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={0.75} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.27 : 0.75}
-        position={isMobile ? [0, -1.75, -0.46] : [0, -3.25, -1.5]}
+        scale={isMobile ? 1.75 : 2.4}
+        position={isMobile ? [-0.5, -1.75, 0] : [-0.5, -1.05, 0]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
