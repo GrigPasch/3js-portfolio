@@ -22,9 +22,11 @@ import goethe from "./company/goethe.png";
 import kotsovolos from "./company/kotsovolos.png";
 import teicm from "./company/teicm.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import lexir from "./lexir.png";
+import nextPortfolio from "./nextPortfolio.png";
+import coinsTable from "./coinsTable.png";
+import form from "./form.png"
+import restaurantMenu from "./restaurantMenu.png"
 
 export {
   logo,
@@ -48,7 +50,9 @@ export {
   goethe,
   kotsovolos,
   teicm,
-  carrent,
-  jobit,
-  tripguide,
+  lexir,
+  nextPortfolio,
+  coinsTable,
+  form,
+  restaurantMenu,
 };

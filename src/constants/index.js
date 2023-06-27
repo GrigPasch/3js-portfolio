@@ -15,9 +15,11 @@ import {
     goethe,
     kotsovolos,
     teicm,
-    carrent,
-    jobit,
-    tripguide,
+    lexir,
+    nextPortfolio,
+    coinsTable,
+    form,
+    restaurantMenu,
   } from "../assets";
   
   export const navLinks = [
@@ -182,95 +184,132 @@ import {
     },
   ];
   
-  export const testimonials = [
-    {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-  ];
   
   export const projects = [
     {
-      name: "Car Rent",
+      name: "E-Commerce Product details page",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "It was part of an assignment, where we had to copy a figma design. The page is the Product"+ 
+        "Details subcategory and is a simple mockup design",
       tags: [
         {
-          name: "react",
-          color: "blue-text-gradient",
+          name: "Next.js",
+          color: "white",
         },
         {
-          name: "mongodb",
-          color: "green-text-gradient",
+          name: "Typescript",
+          color: 'typescript-text-color',
         },
         {
-          name: "tailwind",
-          color: "pink-text-gradient",
+          name: "Javascript",
+          color: "javascript-text-color",
+        },
+        {
+          name: "TailWind",
+          color: "tailwind-text-color",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: lexir,
+      source_code_link: "https://github.com/GrigPasch/lexir-io-challenge",
     },
     {
-      name: "Job IT",
+      name: "Typescript Form",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "A multipage form build with typescript for the functions.",
       tags: [
         {
-          name: "react",
+          name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
-          color: "green-text-gradient",
+          name: "Typescript",
+          color: "typescript-text-color",
         },
         {
-          name: "scss",
+          name: "CSS",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: form,
+      source_code_link: "https://github.com/GrigPasch/Form",
     },
     {
-      name: "Trip Guide",
+      name: "Portfolio page",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "This is the first portfolio page I've built. It is built by utilizing next.js alongside js"+
+        " and tailwind. It is 95% functional (contact form isn't working) and 100% responsive.",
       tags: [
         {
-          name: "nextjs",
-          color: "blue-text-gradient",
+          name: "Nextjs",
+          color: "white",
         },
         {
-          name: "supabase",
-          color: "green-text-gradient",
+          name: "Javascript",
+          color: "javascript-text-color",
         },
         {
-          name: "css",
+          name: "CSS",
           color: "pink-text-gradient",
         },
+        {
+          name: "TailWind",
+          color: "tailwind-text-color",
+        },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: nextPortfolio,
+      source_code_link: "https://github.com/GrigPasch/next.js-portfolio",
+    },
+    {
+      name: "Simple Crypto coins list",
+      description:
+        "A simple crypto coins list, made with the help of CoinGecko API. It showcases all the coins"+
+        " info and provides pagination pagination",
+      tags: [
+        {
+          name: "Next.js",
+          color: "white",
+        },
+        {
+          name: "Javascript",
+          color: "javascript-text-color",
+        },
+        {
+          name: "CSS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "TailWind",
+          color: "tailwind-text-color",
+        },
+      ],
+      image: coinsTable,
+      source_code_link: "https://github.com/GrigPasch/CoinsTable",
+    },
+    {
+      name: "Restaurant Menu",
+      description:
+        "This was done as a draft for a friend of mine that has a family restaurant in Germany."+
+        " It is basically a cost catalog of their restaurant. This project may seem half finished, "+ 
+        "because  but I want to repeat it was just a draft to showcase the overall structure of the online catalog.",
+      tags: [
+        {
+          name: "Nextjs",
+          color: "white",
+        },
+        {
+          name: "Javascript",
+          color: "javascript-text-color",
+        },
+        {
+          name: "CSS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "TailWind",
+          color: "tailwind-text-color",
+        },
+      ],
+      image: restaurantMenu,
+      source_code_link: "https://github.com/GrigPasch/Kreta",
     },
   ];
