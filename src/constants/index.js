@@ -16,6 +16,8 @@ import {
     kotsovolos,
     teicm,
     lexir,
+    tountzisLogo,
+    merchandise,
     nextPortfolio,
     coinsTable,
     form,
@@ -88,6 +90,30 @@ import {
   ];
   
   export const experiences = [
+    {
+      title: "IT Technician (Full-time)",
+      company_name: "S.G. Manufacturing P.C.",
+      icon: "",
+      iconBg: "#383E56",
+      date: "01/12/2022 - 30/09/2023 & 01/10/2024 - today",
+      points: [
+        "Troubleshot software/hardware issues and maintained internal systems " +
+        "Installed and configured devices and software packages ",
+      ],
+    },
+    {
+      title: "Wordpress Developer - Website Administrator",
+      company_name: "Tountzis Candles",
+      icon: tountzisLogo,
+      iconBg: "#383E56",
+      date: "01/10/2023 - 30/09/2024",
+      points: [
+        "A 1 year fixed term contract with a small shop here in my hometown where I : " +
+        "-Designed and launched seasonal landing pages using Flatsome (WordPress theme). " +
+        "-Managed daily product updates and category organization. " +
+        "-Provided e-commerce technical support and maintenance ",
+      ],
+    },
     {
       title: "BEng",
       company_name: "Technological Educational Institute of Central Macedonia, Serres ,Greece",
@@ -188,7 +214,7 @@ import {
     {
       name: "E-Commerce Product details page",
       description:
-        "It was part of an assignment, where we had to copy a figma design. The page is the Product"+ 
+        "It was part of an assignment, where we had to copy a figma design. The page is the Product "+ 
         "Details subcategory and is a simple mockup design",
       tags: [
         {
@@ -214,7 +240,7 @@ import {
     {
       name: "Typescript Form",
       description:
-        "A multipage form build with typescript for the functions.",
+        "A multiple page form build with typescript for the functions.",
       tags: [
         {
           name: "React",
@@ -235,8 +261,8 @@ import {
     {
       name: "Portfolio page",
       description:
-        "This is the first portfolio page I've built. It is built by utilizing next.js alongside js"+
-        " and tailwind. It is 95% functional (contact form isn't working) and 100% responsive.",
+        "This is the first portfolio page I've built. It is built by utilizing next.js alongside js "+
+        "and tailwind. It is 95% functional (contact form isn't working) and 100% responsive.",
       tags: [
         {
           name: "Nextjs",
@@ -261,8 +287,8 @@ import {
     {
       name: "Simple Crypto coins list",
       description:
-        "A simple crypto coins list, made with the help of CoinGecko API. It showcases all the coins"+
-        " info and provides pagination pagination",
+        "A simple crypto coins list, made with the help of CoinGecko API. It showcases all the coins "+
+        "info and provides pagination pagination",
       tags: [
         {
           name: "Next.js",
@@ -287,9 +313,9 @@ import {
     {
       name: "Restaurant Menu",
       description:
-        "This was done as a draft for a friend of mine that has a family restaurant in Germany."+
-        " It is basically a cost catalog of their restaurant. This project may seem half finished, "+ 
-        "because  but I want to repeat it was just a draft to showcase the overall structure of the online catalog.",
+        "This was done as a draft for a friend of mine that has a family restaurant in Germany. "+
+        "It is basically a cost catalog of their restaurant. This project is half finished, "+ 
+        "but it was just a draft for them to see how their catalogue would look like.",
       tags: [
         {
           name: "Nextjs",
@@ -310,5 +336,35 @@ import {
       ],
       image: restaurantMenu,
       source_code_link: "https://github.com/GrigPasch/Kreta",
+    },
+    {
+      name: "E-shop mockup",
+      description:
+        "This is a website that I am building to learn react + vite combo and how they work together. " +
+        "It is basically an e-shop with various products where user can navigate and decide what he wants to buy. " , 
+      tags: [
+        {
+          name: "React",
+          color: "white",
+        },
+        {
+          name: "Javascript",
+          color: "javascript-text-color",
+        },
+        {
+          name: "CSS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "TailWind",
+          color: "tailwind-text-color",
+        },
+        {
+          name: "Vite",
+          color: "green",
+        },
+      ],
+      image: merchandise,
+      source_code_link: "https://github.com/GrigPasch/Merchandise",
     },
   ];
