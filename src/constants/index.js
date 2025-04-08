@@ -94,7 +94,7 @@ import {
     {
       title: "IT Technician (Full-time)",
       company_name: "S.G. Manufacturing P.C.",
-      icon: "greka",
+      icon: greka,
       iconBg: "#fff",
       date: "01/12/2022 - 30/09/2023 & 01/10/2024 - today",
       points: [
