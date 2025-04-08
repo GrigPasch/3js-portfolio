@@ -19,7 +19,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    emailjs.send('service_8vbrxjp', 'template_m90bid1', {from_name: form.name, to_name: 'Greg', from_email: form.email, to_email: 'gregpasch8@gmail.com', message: form.message}, '85O6bt9zzNGBt_KO0')
+    emailjs.send('service_8vbrxjp', 'template_m90bid1', {from_name: form.name, to_name: 'Greg', from_email: form.email, to_email: 'gregpasch8@gmail.com', message: form.message}, 'swhp5-AwiTTyojnA1')
     .then(() => {
       setLoading(false);
       alert('Thank you for contacting me. I will try to get back to you as soon as possible friend :)');

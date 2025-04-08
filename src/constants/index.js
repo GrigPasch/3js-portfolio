@@ -147,7 +147,6 @@ import {
       iconBg: "#fff",
       date: "2021 - 2022",
       points: [
-        "Goethe - Zertifikat B2 of German Language Competency <br />" +
         "Schreiben - Writing <br />" +
         "Lessen - Reading <br />" +
         "Sprechen – Speaking",
