@@ -21,12 +21,14 @@ import ekpa from "./company/ekpa.png";
 import goethe from "./company/goethe.png";
 import kotsovolos from "./company/kotsovolos.png";
 import teicm from "./company/teicm.png";
+import tountzisLogo from "./company/tountzisLogo.png"
 
 import lexir from "./lexir.png";
 import nextPortfolio from "./nextPortfolio.png";
 import coinsTable from "./coinsTable.png";
 import form from "./form.png"
 import restaurantMenu from "./restaurantMenu.png"
+import merchandise from "./merchandise.jpeg"
 
 export {
   logo,
@@ -50,9 +52,11 @@ export {
   goethe,
   kotsovolos,
   teicm,
+  tountzisLogo,
   lexir,
   nextPortfolio,
   coinsTable,
   form,
   restaurantMenu,
+  merchandise,
 };

@@ -17,11 +17,11 @@ import {
     teicm,
     lexir,
     tountzisLogo,
-    merchandise,
     nextPortfolio,
     coinsTable,
     form,
     restaurantMenu,
+    merchandise,
   } from "../assets";
   
   export const navLinks = [
