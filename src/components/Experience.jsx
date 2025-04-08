@@ -44,7 +44,7 @@ const ExperienceCard = ({ experience }) => {
             key={`experience-point-${index}`}
             className='text-white-100 text-[14px] pl-1 tracking-wider'
           >
-            {point}
+            <p dangerouslySetInnerHTML={{ __html: point }} />
           </li>
         ))}
       </ul>

@@ -98,7 +98,7 @@ import {
       iconBg: "#fff",
       date: "01/12/2022 - 30/09/2023 & 01/10/2024 - today",
       points: [
-        "Troubleshot software/hardware issues and maintained internal systems \n" +
+        "Troubleshot software/hardware issues and maintained internal systems <br />" +
         "Installed and configured devices and software packages" ,
       ],
     },
@@ -109,9 +109,9 @@ import {
       iconBg: "#fff",
       date: "01/10/2023 - 30/09/2024",
       points: [
-        "A 1 year fixed term contract with a small shop here in my hometown where I : \n " +
-        "-Designed and launched seasonal landing pages using Flatsome (WordPress theme). \n" +
-        "-Managed daily product updates and category organization. \n" +
+        "A 1 year fixed term contract with a small shop here in my hometown where I : <br /> " +
+        "-Designed and launched seasonal landing pages using Flatsome (WordPress theme). <br />" +
+        "-Managed daily product updates and category organization. <br />" +
         "-Provided e-commerce technical support and maintenance." ,
       ],
     },
@@ -122,8 +122,8 @@ import {
       iconBg: "#fff",
       date: "June 2023",
       points: [
-        "Finished my studies at the university, where among the subjects we were taught, \n" +
-        "we learned languages like C, C++, Java, HTML, PHP and the fundamentals of MySQL \n" +
+        "Finished my studies at the university, where among the subjects we were taught, <br />" +
+        "we learned languages like C, C++, Java, HTML, PHP and the fundamentals of MySQL <br />" +
         "databases.", 
       ],
     },
@@ -134,10 +134,10 @@ import {
       iconBg: "#fff",
       date: "May 2022 - June 2022",
       points: [
-        "This was an online seminar, held by the Brainnest company in which we learned the \n" +
-        "fundamentals of HTML, CSS ad Javascript. We did a project for each programming language \n" +
-        "and were graded for each one. The seminar was taught by Mr. Branko Popovic and was \n" +
-        "overall a great learning experience and really taught you to never forget the fundamentals \n" +
+        "This was an online seminar, held by the Brainnest company in which we learned the <br />" +
+        "fundamentals of HTML, CSS ad Javascript. We did a project for each programming language <br />" +
+        "and were graded for each one. The seminar was taught by Mr. Branko Popovic and was <br />" +
+        "overall a great learning experience and really taught you to never forget the fundamentals <br />" +
         "and their importance even to complex projects.",
       ],
     },
@@ -148,10 +148,10 @@ import {
       iconBg: "#fff",
       date: "2021 - 2022",
       points: [
-        "I succeeded in obtaining 3 out of the 4, sadly, Moduls of Goethe - Zertifikat B2 of German \n" +
-        "Language Competency \n" +
-        "Schreiben - Writing \n" +
-        "Lessen - Reading \n" +
+        "I succeeded in obtaining 3 out of the 4, sadly, Moduls of Goethe - Zertifikat B2 of German <br />" +
+        "Language Competency <br />" +
+        "Schreiben - Writing <br />" +
+        "Lessen - Reading <br />" +
         "Sprechen – Speaking",
       ],
     },
@@ -162,11 +162,11 @@ import {
       iconBg: "#fff",
       date: "June 2021 - November 2021",
       points: [
-        "This was my 6 months internship, where I assisted the technician of the store with \n" +
-        "various technical problems the clients were facing. I also assisted him in setting \n" +
-        "up desktop PCs, initializing smartphones, tablets, laptops and all sorts of equipment \n" +
-        "in order for them to be ready to be used the instant the customer buys them. It was a \n" +
-        "fun 6 month period, where I learned to collaborate with others, hear and assist clients \n" +
+        "This was my 6 months internship, where I assisted the technician of the store with <br />" +
+        "various technical problems the clients were facing. I also assisted him in setting <br />" +
+        "up desktop PCs, initializing smartphones, tablets, laptops and all sorts of equipment <br />" +
+        "in order for them to be ready to be used the instant the customer buys them. It was a <br />" +
+        "fun 6 month period, where I learned to collaborate with others, hear and assist clients <br />" +
         "needs and overall, learn how a big company works."
       ],
     },
@@ -177,10 +177,10 @@ import {
       iconBg: "#fff",
       date: "2019 - 2020",
       points: [
-        "Completed the aforementioned 250 hours seminar orginised by the National and Kapodistrian University of Athens. \n" +
-        "In this seminar, we were taught all the technologies mentioned and were told how to use them, when to use them \n" +
-        "and was overall a great learning experience as well, and probably the  first reason I decided to work with React.js \n" +
-        "framework instead of Angular. Since then of course, I've dwelled deeper in the React system and how it works, \n" +
+        "Completed the aforementioned 250 hours seminar orginised by the National and Kapodistrian University of Athens. <br />" +
+        "In this seminar, we were taught all the technologies mentioned and were told how to use them, when to use them <br />" +
+        "and was overall a great learning experience as well, and probably the  first reason I decided to work with React.js <br />" +
+        "framework instead of Angular. Since then of course, I've dwelled deeper in the React system and how it works, <br />" +
         "learned many libraries, packages and dependencies and how and when to use them.",
       ],
     },
@@ -191,8 +191,8 @@ import {
       iconBg: "#fff",
       date: "2019 - 2020",
       points: [
-        "Completed the aforementioned 138 hours seminar orginised by the National and Kapodistrian University of Athens. \n" +
-        "In this seminar, we were taught Ruby and RoR. We learned the fundamentals of this backend language, how to install \n" +
+        "Completed the aforementioned 138 hours seminar orginised by the National and Kapodistrian University of Athens. <br />" +
+        "In this seminar, we were taught Ruby and RoR. We learned the fundamentals of this backend language, how to install <br />" +
         "it of course, to a project and how it is structured." ,
       ],
     },
@@ -203,8 +203,8 @@ import {
       iconBg: "#fff",
       date: "2018 - 2019",
       points: [
-        "Completed the aforementioned 126 hours seminar orginised by the National and Kapodistrian University of Athens. \n" +
-        "In this seminar, we were taught the basics of web design. We used simple fundamental languages like HTML, CSS and \n" +
+        "Completed the aforementioned 126 hours seminar orginised by the National and Kapodistrian University of Athens. <br />" +
+        "In this seminar, we were taught the basics of web design. We used simple fundamental languages like HTML, CSS and <br />" +
         "Javascript and learned how to utilize them properly." 
       ],
     },
@@ -215,7 +215,7 @@ import {
     {
       name: "E-Commerce Product details page",
       description:
-        "It was part of an assignment, where we had to copy a figma design. The page is the Product \n" +
+        "It was part of an assignment, where we had to copy a figma design. The page is the Product <br />" +
         "Details subcategory and is a simple mockup design.",
       tags: [
         {
@@ -262,7 +262,7 @@ import {
     {
       name: "Portfolio page",
       description:
-        "This is the first portfolio page I've built. It is built by utilizing next.js alongside js \n" +
+        "This is the first portfolio page I've built. It is built by utilizing next.js alongside js <br />" +
         "and tailwind. It is 95% functional (contact form isn't working) and 100% responsive.",
       tags: [
         {
@@ -288,7 +288,7 @@ import {
     {
       name: "Simple Crypto coins list",
       description:
-        "A simple crypto coins list, made with the help of CoinGecko API. It showcases all the coins \n" +
+        "A simple crypto coins list, made with the help of CoinGecko API. It showcases all the coins <br />" +
         "info and provides pagination pagination",
       tags: [
         {
@@ -314,8 +314,8 @@ import {
     {
       name: "Restaurant Menu",
       description:
-        "This was done as a draft for a friend of mine that has a family restaurant in Germany. \n" +
-        "It is basically a cost catalog of their restaurant. This project is half finished, \n" +
+        "This was done as a draft for a friend of mine that has a family restaurant in Germany. <br />" +
+        "It is basically a cost catalog of their restaurant. This project is half finished, <br />" +
         "but it was just a draft for them to see how their catalogue would look like.",
       tags: [
         {
@@ -341,7 +341,7 @@ import {
     {
       name: "E-shop mockup",
       description:
-        "This is a website that I am building to learn react + vite combo and how they work together. \n" +
+        "This is a website that I am building to learn react + vite combo and how they work together. <br />" +
         "It is basically an e-shop with various products where user can navigate and decide what he wants to buy." , 
       tags: [
         {
