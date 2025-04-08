@@ -135,10 +135,9 @@ import {
       date: "May 2022 - June 2022",
       points: [
         "This was an online seminar, held by the Brainnest company in which we learned the <br />" +
-        "fundamentals of HTML, CSS ad Javascript. We did a project for each programming language <br />" +
-        "and were graded for each one. The seminar was taught by Mr. Branko Popovic and was <br />" +
-        "overall a great learning experience and really taught you to never forget the fundamentals <br />" +
-        "and their importance even to complex projects.",
+        "fundamentals of HTML, CSS ad Javascript. We did a project for each programming language and were graded for each one.<br />" +
+        "The seminar was taught by Mr. Branko Popovic and was overall a great learning experience <br />" +
+        "and really taught you to never forget the fundamentals and their importance even to complex projects.",
       ],
     },
     {
