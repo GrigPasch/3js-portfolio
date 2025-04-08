@@ -89,14 +89,14 @@ import {
   
   export const experiences = [
     {
-      title: "BS or BSc",
-      company_name: "Technological Educational Institute of Central Macedonia",
+      title: "BEng",
+      company_name: "Technological Educational Institute of Central Macedonia, Serres ,Greece",
       icon: teicm,
       iconBg: "#383E56",
       date: "June 2023",
       points: [
         "Finished my studies at the university, where among the subjects we were taught," +
-        "we learned languages like C, C++, Java, HTML, PHP and the fundamentals of MySQL" +
+        "we learned languages like C, C++, Java, HTML, PHP and the fundamentals of MySQL " +
         "databases.",
       ],
     },
@@ -121,7 +121,7 @@ import {
       iconBg: "#E6DEDD",
       date: "2021 - 2022",
       points: [
-        "I succeded in obtaining 3 out of the 4, sadly, Moduls of Goethe - Zertifikat B2 of German" +
+        "I succeeded in obtaining 3 out of the 4, sadly, Moduls of Goethe - Zertifikat B2 of German" +
         "Language Competency",
         "Schreiben - Writing",
         "Lessen - Reading",
