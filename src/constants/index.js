@@ -136,8 +136,8 @@ import {
       points: [
         "This was an online seminar, held by the Brainnest company in which we learned the <br />" +
         "fundamentals of HTML, CSS ad Javascript. We did a project for each programming language and were graded for each one.<br />" +
-        "The seminar was taught by Mr. Branko Popovic and was overall a great learning experience <br />" +
-        "and really taught you to never forget the fundamentals and their importance even to complex projects.",
+        "The seminar was taught by Mr. Branko Popovic and was overall a great learning experience and really taught you to <br />" +
+        "never forget the fundamentals and their importance even to complex projects.",
       ],
     },
     {
