@@ -147,8 +147,7 @@ import {
       iconBg: "#fff",
       date: "2021 - 2022",
       points: [
-        "I succeeded in obtaining 3 out of the 4, sadly, Moduls of Goethe - Zertifikat B2 of German <br />" +
-        "Language Competency <br />" +
+        "Goethe - Zertifikat B2 of German Language Competency <br />" +
         "Schreiben - Writing <br />" +
         "Lessen - Reading <br />" +
         "Sprechen – Speaking",
