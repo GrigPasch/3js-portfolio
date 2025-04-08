@@ -22,6 +22,7 @@ import goethe from "./company/goethe.png";
 import kotsovolos from "./company/kotsovolos.png";
 import teicm from "./company/teicm.png";
 import tountzisLogo from "./company/tountzisLogo.png"
+import greka from "./company/greka.webp"
 
 import lexir from "./lexir.png";
 import nextPortfolio from "./nextPortfolio.png";
@@ -53,6 +54,7 @@ export {
   kotsovolos,
   teicm,
   tountzisLogo,
+  greka,
   lexir,
   nextPortfolio,
   coinsTable,

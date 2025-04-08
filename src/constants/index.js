@@ -17,6 +17,7 @@ import {
     teicm,
     lexir,
     tountzisLogo,
+    greka,
     nextPortfolio,
     coinsTable,
     form,
@@ -93,7 +94,7 @@ import {
     {
       title: "IT Technician (Full-time)",
       company_name: "S.G. Manufacturing P.C.",
-      
+      icon: "greka",
       iconBg: "#fff",
       date: "01/12/2022 - 30/09/2023 & 01/10/2024 - today",
       points: [
@@ -118,7 +119,7 @@ import {
       title: "BEng",
       company_name: "Technological Educational Institute of Central Macedonia, Serres ,Greece",
       icon: teicm,
-      iconBg: "#383E56",
+      iconBg: "#fff",
       date: "June 2023",
       points: [
         "Finished my studies at the university, where among the subjects we were taught," +
@@ -130,7 +131,7 @@ import {
       title: "Seminar titled: Frontend development Industry training of 24hours + individual work",
       company_name: "Brainnest",
       icon: brainnest,
-      iconBg: "#E6DEDD",
+      iconBg: "#fff",
       date: "May 2022 - June 2022",
       points: [
         "This was an online seminar, held by the Brainnest company in which we learned the " +
@@ -144,7 +145,7 @@ import {
       title: "Gothe - Zertifikat B2",
       company_name: "Goethe - Institut",
       icon: goethe,
-      iconBg: "#E6DEDD",
+      iconBg: "#fff",
       date: "2021 - 2022",
       points: [
         "I succeeded in obtaining 3 out of the 4, sadly, Moduls of Goethe - Zertifikat B2 of German" +
@@ -158,7 +159,7 @@ import {
       title: "Assistant Technician, Internship",
       company_name: "Dixons S.E. - Kotsovolos",
       icon: kotsovolos,
-      iconBg: "#E6DEDD",
+      iconBg: "#fff",
       date: "June 2021 - November 2021",
       points: [
         "This was my 6 months internship, where I assisted the technician of the store with" +
@@ -173,7 +174,7 @@ import {
       title: "Seminar titled: Ultimate web Development for Experts with React 16, Angular 7, Vue.js 2, HTML, Javascript, JQuery and Bootstrap 4",
       company_name: "National and Kapodistrian University of Athens",
       icon: ekpa,
-      iconBg: "#E6DEDD",
+      iconBg: "#fff",
       date: "2019 - 2020",
       points: [
         "Completed the aforementioned 250 hours seminar orginised by the National and Kapodistrian University of Athens. " +
@@ -187,7 +188,7 @@ import {
       title: "Seminar titled: Ruby and Ruby on Rails: Web and Desktop Application Development",
       company_name: "National and Kapodistrian University of Athens",
       icon: ekpa,
-      iconBg: "#E6DEDD",
+      iconBg: "#fff",
       date: "2019 - 2020",
       points: [
         "Completed the aforementioned 138 hours seminar orginised by the National and Kapodistrian University of Athens. " +
@@ -199,7 +200,7 @@ import {
       title: "Seminar titled: Web design and Front-End Expertise",
       company_name: "National and Kapodistrian University of Athens",
       icon: ekpa,
-      iconBg: "#E6DEDD",
+      iconBg: "#fff",
       date: "2018 - 2019",
       points: [
         "Completed the aforementioned 126 hours seminar orginised by the National and Kapodistrian University of Athens. " +
