@@ -31,11 +31,10 @@ const About = () => {
       </motion.div>
       <motion.p variants = { fadeIn("", "", 0.1, 1)}
        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-          Hello, I am an aspiring FrontEnd developer from Greece, trying to
-          find the perfect job. I am skilled in HTML, CSS, pretty good at Js
-          and React and I am currently learning more of Three.js alongside,
-          Typescript, tailwind and others. I am a quick learner and I love
-          collaborating with other people! 
+          Detail-oriented and self-driven Frontend Developer with a solid foundation in web technologies
+          including React, Tailwind, HTML/CSS, and JavaScript. Passionate about building engaging user
+          interfaces and solving real-world problems with clean, efficient code. Highly adaptable,
+          fast learner, and dedicated to continuous learning and improvement.
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-x-[150px]'>
         {services.map((service, index) => (

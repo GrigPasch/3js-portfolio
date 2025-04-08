@@ -98,8 +98,8 @@ import {
       iconBg: "#fff",
       date: "01/12/2022 - 30/09/2023 & 01/10/2024 - today",
       points: [
-        "Troubleshot software/hardware issues and maintained internal systems <br />" +
-        "Installed and configured devices and software packages" ,
+        "Troubleshot software/hardware issues and maintained internal systems. <br />" +
+        "Installed and configured devices and software packages." ,
       ],
     },
     {
@@ -163,11 +163,9 @@ import {
       date: "June 2021 - November 2021",
       points: [
         "This was my 6 months internship, where I assisted the technician of the store with <br />" +
-        "various technical problems the clients were facing. I also assisted him in setting <br />" +
-        "up desktop PCs, initializing smartphones, tablets, laptops and all sorts of equipment <br />" +
-        "in order for them to be ready to be used the instant the customer buys them. It was a <br />" +
-        "fun 6 month period, where I learned to collaborate with others, hear and assist clients <br />" +
-        "needs and overall, learn how a big company works."
+        "various technical problems the clients were facing. <br />" +
+        "-Assisted in daily tech support and hardware configuration. <br /> " +
+        "-Gained hands-on experience with customer service and system management." 
       ],
     },
     {
@@ -177,7 +175,7 @@ import {
       iconBg: "#fff",
       date: "2019 - 2020",
       points: [
-        "Completed the aforementioned 250 hours seminar orginised by the National and Kapodistrian University of Athens. <br />" +
+        "Completed the aforementioned 250 hours seminar organized by the National and Kapodistrian University of Athens. <br />" +
         "In this seminar, we were taught all the technologies mentioned and were told how to use them, when to use them <br />" +
         "and was overall a great learning experience as well, and probably the  first reason I decided to work with React.js <br />" +
         "framework instead of Angular. Since then of course, I've dwelled deeper in the React system and how it works, <br />" +
@@ -191,9 +189,9 @@ import {
       iconBg: "#fff",
       date: "2019 - 2020",
       points: [
-        "Completed the aforementioned 138 hours seminar orginised by the National and Kapodistrian University of Athens. <br />" +
-        "In this seminar, we were taught Ruby and RoR. We learned the fundamentals of this backend language, how to install <br />" +
-        "it of course, to a project and how it is structured." ,
+        "Completed the aforementioned 138 hours seminar organized by the National and Kapodistrian University of Athens. <br />" +
+        "In this seminar, we were taught Ruby and RoR. We learned the fundamentals of this backend language, how to use  <br />" +
+        "it and how it is structured." ,
       ],
     },
     {
@@ -203,7 +201,7 @@ import {
       iconBg: "#fff",
       date: "2018 - 2019",
       points: [
-        "Completed the aforementioned 126 hours seminar orginised by the National and Kapodistrian University of Athens. <br />" +
+        "Completed the aforementioned 126 hours seminar organized by the National and Kapodistrian University of Athens. <br />" +
         "In this seminar, we were taught the basics of web design. We used simple fundamental languages like HTML, CSS and <br />" +
         "Javascript and learned how to utilize them properly." 
       ],
