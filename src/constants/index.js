@@ -93,12 +93,11 @@ import {
       company_name: "Technological Educational Institute of Central Macedonia",
       icon: teicm,
       iconBg: "#383E56",
-      date: "September 2012 - June 2023",
+      date: "June 2023",
       points: [
-        "Finished my studies at the university, where among the subjects we were taught,"+
-        "we learned languages like C, C++, Java, HTML, PHP and the fundamentals of MySQL"+
-        "databases. As you can tell I preferred the web design languages and decided to pursue"+
-        "this field as my work :)",
+        "Finished my studies at the university, where among the subjects we were taught," +
+        "we learned languages like C, C++, Java, HTML, PHP and the fundamentals of MySQL" +
+        "databases.",
       ],
     },
     {
