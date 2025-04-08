@@ -93,8 +93,8 @@ import {
     {
       title: "IT Technician (Full-time)",
       company_name: "S.G. Manufacturing P.C.",
-      icon: "",
-      iconBg: "#383E56",
+      
+      iconBg: "#fff",
       date: "01/12/2022 - 30/09/2023 & 01/10/2024 - today",
       points: [
         "Troubleshot software/hardware issues and maintained internal systems " +
@@ -105,7 +105,7 @@ import {
       title: "Wordpress Developer - Website Administrator",
       company_name: "Tountzis Candles",
       icon: tountzisLogo,
-      iconBg: "#383E56",
+      iconBg: "#fff",
       date: "01/10/2023 - 30/09/2024",
       points: [
         "A 1 year fixed term contract with a small shop here in my hometown where I : " +
