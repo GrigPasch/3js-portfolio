@@ -8,19 +8,38 @@ import CanvasLoader from '../Loader'
 const Earth = () => {
   const earth = useGLTF('./planet/scene.gltf')
   return (
-    <primitive object = {earth.scene} scale = {2.5} position-y = {0} rotation-y =  {0}/>
+    <primitive
+      object={earth.scene}
+      scale={2.5}
+      position-y={0}
+      rotation-y={0}
+    />
   )
 }
 
-const EarthCanvas = () => {
-  return(
-    <Canvas shadows frameloop = 'demand' gl = {{ preserveDrawingBuffer: true}} camera = {{fov: 45, near: 0.1, far: 200, position: [-4, 3, 6]}}>
-      <Suspense>
-        <OrbitControls autoRotate enableZoom = {false} maxPolarAngle = {Math.PI / 2} minPolarAngle = {Math.PI / 2}/>
-        <Earth/>
-      </Suspense>
-    </Canvas>
+// Preload so geometry is ready before render
+useGLTF.preload('./planet/scene.gltf')
 
+const EarthCanvas = () => {
+  return (
+    <Canvas
+      shadows
+      frameloop='demand'
+      gl={{ preserveDrawingBuffer: true }}
+      camera={{ fov: 45, near: 0.1, far: 200, position: [-4, 3, 6] }}
+    >
+      {/* fallback added — prevents NaN bounding sphere on empty geometry */}
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          autoRotate
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
+        <Earth />
+      </Suspense>
+      <Preload all />
+    </Canvas>
   )
 }
 

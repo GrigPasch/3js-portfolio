@@ -23,6 +23,7 @@ import kotsovolos from "./company/kotsovolos.png";
 import teicm from "./company/teicm.png";
 import tountzisLogo from "./company/tountzisLogo.png"
 import greka from "./company/greka.png"
+import dromeas from "./company/dromeas.png"
 
 import lexir from "./lexir.png";
 import nextPortfolio from "./nextPortfolio.png";
@@ -30,6 +31,7 @@ import coinsTable from "./coinsTable.png";
 import form from "./form.png"
 import restaurantMenu from "./restaurantMenu.png"
 import merchandise from "./merchandise.png"
+import vacationCalendar from "./vacationCalendar.png"
 
 export {
   logo,
@@ -61,4 +63,6 @@ export {
   form,
   restaurantMenu,
   merchandise,
+  vacationCalendar,
+  dromeas,
 };
