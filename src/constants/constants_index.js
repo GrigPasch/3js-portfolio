@@ -38,7 +38,7 @@ import {
   export const services = [
     { title: "Frontend Developer",    icon: web     },
     { title: "React Developer",       icon: mobile  },
-    { title: "IT Support Specialist", icon: backend },
+    { title: "IT Support Engineer", icon: backend },
   ];
 
   export const technologies = [

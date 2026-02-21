@@ -27,7 +27,6 @@ const facts = [
   { icon: "💼", label: "Status",     value: "Open to Junior Frontend roles"               },
 ];
 
-/* ─── Fluid morphing hook ─── */
 const useMorphingGeometry = (baseGeo, speed = 1, amplitude = 0.12) => {
   const meshRef = useRef();
   const originalPositions = useMemo(() => Float32Array.from(baseGeo.attributes.position.array), [baseGeo]);

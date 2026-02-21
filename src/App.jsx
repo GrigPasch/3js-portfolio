@@ -36,7 +36,7 @@ const Footer = () => (
         {[
           { label: "GitHub",      href: "https://github.com/GrigPasch",          external: true             },
           { label: "Email",       href: "mailto:gregpasch8@gmail.com",            external: false            },
-          { label: "Download CV", href: "/CV__Grigorios_Paschalidis.pdf",         download: true, accent: true },
+          { label: "Download CV", href: "/public/GRIGORIOS_PASCHALIDIS_RESUME.pdf",         download: true, accent: true },
         ].map((l) => (
           <a key={l.label} href={l.href}
             download={l.download || undefined}

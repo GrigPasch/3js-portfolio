@@ -53,7 +53,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     emailjs.send(
-      "service_8vbrxjp", "template_m90bid1",
+      "service_a0z4bre", "template_ym1i2bc",
       { from_name: form.name, to_name: "Greg", from_email: form.email, to_email: "gregpasch8@gmail.com", message: form.message },
       "swhp5-AwiTTyojnA1"
     ).then(() => {
@@ -77,7 +77,6 @@ const Contact = () => {
         >
           <p className={styles.sectionSubText}>Got something in mind?</p>
           <h3 className={`${styles.sectionHeadText} mt-1`}>Let&apos;s Talk.</h3>
-
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-4 mb-6 sm:mb-8">
             {socials.map((s) => (
               <a key={s.name} href={s.url}
@@ -144,7 +143,6 @@ const Contact = () => {
             </div>
           </form>
         </motion.div>
-
         {/* Earth */}
         <motion.div
           ref={earthRef}

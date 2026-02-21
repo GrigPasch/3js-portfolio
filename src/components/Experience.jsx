@@ -19,7 +19,6 @@ const ExperienceCard = ({ experience, index }) => (
       <div className="w-[1px] flex-1 mt-3 min-h-[32px]"
         style={{ background: "linear-gradient(180deg, rgba(94,196,255,0.2), transparent)" }} />
     </div>
-
     {/* Content */}
     <div className="flex-1 pb-8 sm:pb-12">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4 mb-3">
@@ -55,11 +54,9 @@ const Experience = () => (
       <p className={styles.sectionSubText}>Where I&apos;ve Worked</p>
       <h2 className={styles.sectionHeadText}>Work Experience.</h2>
     </motion.div>
-
     <motion.div variants={fadeIn("right", "tween", 0.1, 0.6)}
       className="mt-4 mb-10 sm:mb-14 h-[1px] w-full max-w-xs"
       style={{ background: "linear-gradient(90deg, #5ec4ff, transparent)" }} />
-
     <div className="max-w-3xl">
       {workExperiences.map((exp, i) => (
         <ExperienceCard key={i} experience={exp} index={i} />

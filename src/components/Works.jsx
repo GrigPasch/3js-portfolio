@@ -52,7 +52,6 @@ const BGScene = () => {
     }
   });
 
-  // Procedural grid lines
   const gridLines = useMemo(() => {
     const lines = [];
     const W = 28, D = 22, cols = 14, rows = 11;
@@ -72,7 +71,6 @@ const BGScene = () => {
       <ambientLight intensity={0.2} />
       <pointLight position={[0, 4, 2]}  intensity={0.8} color="#5ec4ff" />
       <pointLight position={[0, -2, 2]} intensity={0.4} color="#bf61ff" />
-
       <group ref={gridRef} position={[0, -3.5, 0]} rotation={[-0.45, 0, 0]}>
         {gridLines.map((l, i) => {
           const pts = [new THREE.Vector3(l[0], l[1], l[2]), new THREE.Vector3(l[3], l[4], l[5])];
@@ -99,7 +97,6 @@ const BGScene = () => {
     </>
   );
 };
-
 /* ── traffic light buttons ── */
 const TrafficLights = ({ onClose }) => (
   <div className="flex items-center gap-1.5">
@@ -111,7 +108,6 @@ const TrafficLights = ({ onClose }) => (
   </div>
 );
 
-/* ── fake path breadcrumb ── */
 const PathBar = ({ project }) => {
   const [shown, setShown] = useState("");
   const path = project
@@ -137,7 +133,6 @@ const PathBar = ({ project }) => {
   );
 };
 
-/* ── sidebar file item ── */
 const FileItem = ({ project, index, selected, onClick }) => {
   const color = ACCENTS[index % ACCENTS.length];
   const ext   = getExt(project.tags);
@@ -303,7 +298,7 @@ const EmptyState = () => (
   </div>
 );
 
-/* ── mobile card list (no OS chrome) ── */
+/* ── mobile card list ── */
 const MobileView = ({ selected, onSelect }) => {
   const project = selected !== null ? projects[selected] : null;
   const color   = selected !== null ? ACCENTS[selected % ACCENTS.length] : "#5ec4ff";
@@ -323,7 +318,6 @@ const MobileView = ({ selected, onSelect }) => {
           ))}
         </div>
       </div>
-
       {/* Preview */}
       <AnimatePresence mode="wait">
         {project && (

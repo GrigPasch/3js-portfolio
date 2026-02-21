@@ -49,7 +49,6 @@ const Navbar = () => {
         <div className="h-full will-change-transform"
           style={{ width: `${progress}%`, background: "linear-gradient(90deg, #5ec4ff, #bf61ff)", transition: "width 0.1s linear" }} />
       </div>
-
       <motion.nav
         initial={{ y: -70, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -59,7 +58,6 @@ const Navbar = () => {
         }`}
       >
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 sm:gap-3 group"
             onClick={() => { setActive(""); window.scrollTo(0, 0); }}>
@@ -70,7 +68,6 @@ const Navbar = () => {
               <span className="font-body text-[#5ec4ff] text-[9px] sm:text-[10px] tracking-[2px] sm:tracking-[3px] uppercase hidden sm:block">Frontend Developer</span>
             </div>
           </Link>
-
           {/* Desktop links */}
           <ul className="list-none hidden sm:flex flex-row items-center gap-6 lg:gap-8">
             {navLinks.map((nav) => (
@@ -86,7 +83,7 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-              <a href="/CV__Grigorios_Paschalidis.pdf" download
+              <a href="/public/GRIGORIOS_PASCHALIDIS_RESUME.pdf" download
                 className="btn-secondary !py-2 !px-3.5 !text-[12px] flex items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 text-[#5ec4ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -95,10 +92,9 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-
           {/* Mobile */}
           <div className="sm:hidden flex items-center gap-2">
-            <a href="/CV__Grigorios_Paschalidis.pdf" download
+            <a href="/public/GRIGORIOS_PASCHALIDIS_RESUME.pdf" download
               className="font-body text-[#5ec4ff] text-[11px] font-semibold border border-[#5ec4ff]/30 px-3 py-1.5 rounded-full touch-action-manipulation">
               CV
             </a>

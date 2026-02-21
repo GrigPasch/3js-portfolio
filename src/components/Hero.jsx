@@ -38,7 +38,6 @@ const TypewriterText = () => {
   );
 };
 
-// Reduced from 12 → 8 particles; deterministic positions
 const particles = [
   { id: 0, x: 8,  y: 18, size: 5, delay: 0.0, dur: 4.2 },
   { id: 1, x: 20, y: 70, size: 7, delay: 0.5, dur: 5.1 },
@@ -74,7 +73,7 @@ const Hero = () => {
   const canvasRef = useRef(null);
   const [canvasVisible, setCanvasVisible] = useState(false);
 
-  // Load 3D canvas only after first paint — improves LCP significantly
+  {/*Load 3D canvas only after first paint*/}
   useEffect(() => {
     const id = requestIdleCallback
       ? requestIdleCallback(() => setCanvasVisible(true), { timeout: 1500 })
@@ -84,7 +83,6 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen mx-auto overflow-hidden">
-
       {/* 3D globe — lazy loaded after idle */}
       <div ref={canvasRef} className="absolute inset-0 z-0">
         {canvasVisible && (
@@ -93,23 +91,18 @@ const Hero = () => {
           </Suspense>
         )}
       </div>
-
       {/* Directional gradient veil */}
       <div className="absolute inset-0 z-[1] pointer-events-none"
         style={{ background: "linear-gradient(105deg, rgba(5,8,22,0.94) 0%, rgba(5,8,22,0.78) 45%, rgba(5,8,22,0.15) 100%)" }} />
-
       {/* Ambient glow */}
       <div className="absolute top-1/4 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] rounded-full pointer-events-none z-[1]"
         style={{ background: "radial-gradient(circle, rgba(94,196,255,0.06) 0%, transparent 70%)" }} />
-
       {/* Particles */}
       <div className="absolute inset-0 z-[2] pointer-events-none">
         {particles.map(p => <Particle key={p.id} {...p} />)}
       </div>
-
       {/* Text content */}
       <div className={`absolute inset-0 top-[100px] sm:top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-4 sm:gap-5 z-[3]`}>
-
         {/* Accent line */}
         <div className="flex flex-col justify-center items-center mt-5 shrink-0">
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
@@ -120,7 +113,6 @@ const Hero = () => {
             transition={{ duration: 0.9, delay: 0.4 }}
             className="w-[2px] sm:h-80 h-40 violet-gradient origin-top" />
         </div>
-
         <div className="mt-4 sm:mt-5 max-w-xl sm:max-w-2xl">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.65, delay: 0.3 }}>
@@ -138,7 +130,6 @@ const Hero = () => {
               </span>
             </h1>
           </motion.div>
-
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.65, delay: 0.55 }} className="mt-3 sm:mt-4">
             <p className={styles.heroSubText}>A passionate <TypewriterText /></p>
@@ -147,7 +138,6 @@ const Hero = () => {
               Open to relocation across the EU.
             </p>
           </motion.div>
-
           {/* CTAs */}
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -162,15 +152,8 @@ const Hero = () => {
               View my work
             </a>
           </motion.div>
-
-          {/* Stats — hidden on mobile to avoid clutter */}
-          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.05 }}
-            className="hidden sm:flex gap-6 sm:gap-10 mt-8 sm:mt-10">
-          </motion.div>
         </div>
       </div>
-
       {/* Scroll indicator */}
       <div className="absolute xs:bottom-10 bottom-28 sm:bottom-32 w-full flex justify-center items-center z-[3]">
         <a href="#about">
