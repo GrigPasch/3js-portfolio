@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useRef, Suspense, lazy } from "react";
 import { styles } from "../styles";
 
-// Lazy-load the heavy 3D canvas — doesn't block initial paint
+// Lazy-load the heavy 3D canvas
 const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
 const roles = ["Frontend Developer","React Developer","UI Craftsman","IT Specialist","Web3 Curious"];
@@ -73,16 +73,26 @@ const Hero = () => {
   const canvasRef = useRef(null);
   const [canvasVisible, setCanvasVisible] = useState(false);
 
-  {/*Load 3D canvas only after first paint*/}
+  // Load 3D canvas only after first paint
   useEffect(() => {
-    const id = requestIdleCallback
-      ? requestIdleCallback(() => setCanvasVisible(true), { timeout: 1500 })
-      : setTimeout(() => setCanvasVisible(true), 300);
-    return () => (requestIdleCallback ? cancelIdleCallback(id) : clearTimeout(id));
+    let id;
+    if (typeof requestIdleCallback !== "undefined") {
+      id = requestIdleCallback(() => setCanvasVisible(true), { timeout: 1500 });
+    } else {
+      id = setTimeout(() => setCanvasVisible(true), 300);
+    }
+    return () => {
+      if (typeof requestIdleCallback !== "undefined") {
+        cancelIdleCallback(id);
+      } else {
+        clearTimeout(id);
+      }
+    };
   }, []);
 
   return (
     <section className="relative w-full h-screen mx-auto overflow-hidden">
+
       {/* 3D globe — lazy loaded after idle */}
       <div ref={canvasRef} className="absolute inset-0 z-0">
         {canvasVisible && (
@@ -91,18 +101,23 @@ const Hero = () => {
           </Suspense>
         )}
       </div>
+
       {/* Directional gradient veil */}
       <div className="absolute inset-0 z-[1] pointer-events-none"
         style={{ background: "linear-gradient(105deg, rgba(5,8,22,0.94) 0%, rgba(5,8,22,0.78) 45%, rgba(5,8,22,0.15) 100%)" }} />
+
       {/* Ambient glow */}
       <div className="absolute top-1/4 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] rounded-full pointer-events-none z-[1]"
         style={{ background: "radial-gradient(circle, rgba(94,196,255,0.06) 0%, transparent 70%)" }} />
+
       {/* Particles */}
       <div className="absolute inset-0 z-[2] pointer-events-none">
         {particles.map(p => <Particle key={p.id} {...p} />)}
       </div>
+
       {/* Text content */}
       <div className={`absolute inset-0 top-[100px] sm:top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-4 sm:gap-5 z-[3]`}>
+
         {/* Accent line */}
         <div className="flex flex-col justify-center items-center mt-5 shrink-0">
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
@@ -113,6 +128,7 @@ const Hero = () => {
             transition={{ duration: 0.9, delay: 0.4 }}
             className="w-[2px] sm:h-80 h-40 violet-gradient origin-top" />
         </div>
+
         <div className="mt-4 sm:mt-5 max-w-xl sm:max-w-2xl">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.65, delay: 0.3 }}>
@@ -130,6 +146,7 @@ const Hero = () => {
               </span>
             </h1>
           </motion.div>
+
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.65, delay: 0.55 }} className="mt-3 sm:mt-4">
             <p className={styles.heroSubText}>A passionate <TypewriterText /></p>
@@ -138,6 +155,7 @@ const Hero = () => {
               Open to relocation across the EU.
             </p>
           </motion.div>
+
           {/* CTAs */}
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -154,6 +172,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+
       {/* Scroll indicator */}
       <div className="absolute xs:bottom-10 bottom-28 sm:bottom-32 w-full flex justify-center items-center z-[3]">
         <a href="#about">
