@@ -53,7 +53,8 @@ const useMorphingGeometry = (baseGeo, speed = 1, amplitude = 0.12) => {
 
 /* ─── Shapes ─── */
 const FluidTorusKnot = ({ color, emissive }) => {
-  const meshRef = useRef();
+  const geo    = useMemo(() => new THREE.TorusKnotGeometry(1, 0.32, 96, 14), []);
+  const meshRef = useMorphingGeometry(geo, 0.6, 0.1);
   useFrame(({ clock }) => {
     if (!meshRef.current) return;
     const t = clock.getElapsedTime();
@@ -62,7 +63,7 @@ const FluidTorusKnot = ({ color, emissive }) => {
   });
   return (
     <mesh ref={meshRef} castShadow scale={0.72}>
-      <torusKnotGeometry args={[1, 0.32, 96, 14]} />
+      <primitive object={geo} attach="geometry" />
       <meshStandardMaterial color={color} emissive={emissive} emissiveIntensity={0.4} roughness={0.1} metalness={0.9} />
     </mesh>
   );
@@ -109,7 +110,7 @@ const ServiceScene = ({ config }) => {
   );
 };
 
-/* ─── CSS fallback shape for mobile — no WebGL ─── */
+/* ─── CSS fallback shape for mobile ─── */
 const ShapeFallback = ({ color, index }) => {
   const shapes = [
     <div key="tk" className="relative w-full h-full flex items-center justify-center">
@@ -168,6 +169,7 @@ const ServiceCard = ({ index }) => {
     return () => mq.removeEventListener("change", h);
   }, []);
 
+  // Only observe for WebGL — skip on mobile
   useEffect(() => {
     if (isMobile) return;
     const el = wrapRef.current;
@@ -187,7 +189,7 @@ const ServiceCard = ({ index }) => {
     >
       <div ref={wrapRef} className="relative w-[140px] h-[140px] sm:w-[190px] sm:h-[190px]">
         {isMobile ? (
-          /* CSS animated shape*/
+          /* CSS animated shape */
           <div className="w-full h-full rounded-full flex items-center justify-center"
             style={{ background: `radial-gradient(circle, ${color}12 0%, transparent 70%)` }}>
             <ShapeFallback color={color} index={index} />
