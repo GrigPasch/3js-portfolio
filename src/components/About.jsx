@@ -27,8 +27,10 @@ const facts = [
   { icon: "💼", label: "Status",     value: "Open to Junior Frontend roles"               },
 ];
 
+/* ─── Fluid morphing hook ─── */
 const useMorphingGeometry = (baseGeo, speed = 1, amplitude = 0.12) => {
   const meshRef = useRef();
+  // Store original positions once
   const originalPositions = useMemo(() => Float32Array.from(baseGeo.attributes.position.array), [baseGeo]);
 
   useFrame(({ clock }) => {
@@ -49,6 +51,7 @@ const useMorphingGeometry = (baseGeo, speed = 1, amplitude = 0.12) => {
   return meshRef;
 };
 
+/* ─── Shapes ─── */
 const FluidTorusKnot = ({ color, emissive }) => {
   const meshRef = useRef();
   useFrame(({ clock }) => {
@@ -106,13 +109,67 @@ const ServiceScene = ({ config }) => {
   );
 };
 
+/* ─── CSS fallback shape for mobile — no WebGL ─── */
+const ShapeFallback = ({ color, index }) => {
+  const shapes = [
+    <div key="tk" className="relative w-full h-full flex items-center justify-center">
+      {[1, 0.72, 0.46].map((s, i) => (
+        <div key={i} className="absolute rounded-full border-2"
+          style={{
+            width: `${s * 100}%`, height: `${s * 100}%`,
+            borderColor: color + (i === 0 ? "60" : i === 1 ? "90" : "ff"),
+            boxShadow: i === 2 ? `0 0 16px ${color}60` : "none",
+            animation: `spin ${3 + i * 1.2}s linear infinite ${i % 2 === 0 ? "" : "reverse"}`,
+          }} />
+      ))}
+    </div>,
+    <div key="ico" className="relative w-full h-full flex items-center justify-center">
+      {[0, 60, 120].map((rot, i) => (
+        <div key={i} className="absolute"
+          style={{
+            width: "65%", height: "65%",
+            border: `2px solid ${color}${i === 0 ? "ff" : i === 1 ? "80" : "40"}`,
+            borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
+            transform: `rotate(${rot}deg)`,
+            boxShadow: i === 0 ? `0 0 18px ${color}50` : "none",
+            animation: `spin ${4 + i * 0.8}s linear infinite`,
+          }} />
+      ))}
+    </div>,
+    <div key="oct" className="relative w-full h-full flex items-center justify-center">
+      {[45, 0, 22].map((rot, i) => (
+        <div key={i} className="absolute"
+          style={{
+            width: `${(1 - i * 0.2) * 65}%`, height: `${(1 - i * 0.2) * 65}%`,
+            border: `2px solid ${color}${i === 0 ? "50" : i === 1 ? "80" : "ff"}`,
+            transform: `rotate(${rot}deg)`,
+            boxShadow: i === 2 ? `0 0 16px ${color}60` : "none",
+            animation: `spin ${3.5 + i * 0.6}s linear infinite ${i % 2 ? "reverse" : ""}`,
+          }} />
+      ))}
+    </div>,
+  ];
+  return shapes[index] ?? shapes[0];
+};
+
+/* ─── ServiceCard ─── */
 const ServiceCard = ({ index }) => {
   const config   = serviceConfig[index];
   const { color, label } = config;
   const wrapRef  = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const [visible,   setVisible]   = useState(false);
+  const [isMobile,  setIsMobile]  = useState(() => window.innerWidth < 768);
 
   useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setIsMobile(mq.matches);
+    const h = (e) => setIsMobile(e.matches);
+    mq.addEventListener("change", h);
+    return () => mq.removeEventListener("change", h);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
     const el = wrapRef.current;
     if (!el) return;
     const obs = new IntersectionObserver(
@@ -121,27 +178,35 @@ const ServiceCard = ({ index }) => {
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [isMobile]);
 
   return (
     <motion.div
       variants={fadeIn("up", "spring", 0.2 * index, 0.65)}
       className="flex flex-col items-center gap-3 group"
     >
-      <div ref={wrapRef} className="relative w-[160px] h-[160px] sm:w-[190px] sm:h-[190px]">
-        {visible && (
-          <Canvas
-            frameloop="always"
-            dpr={[1, 1.5]} 
-            gl={{ preserveDrawingBuffer: false, alpha: true, antialias: true, powerPreference: "high-performance" }}
-            camera={{ position: [0, 0, 5], fov: 40 }}
-          >
-            <Suspense fallback={<CanvasLoader />}>
-              <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2.5} />
-              <ServiceScene config={config} />
-            </Suspense>
-            <Preload all />
-          </Canvas>
+      <div ref={wrapRef} className="relative w-[140px] h-[140px] sm:w-[190px] sm:h-[190px]">
+        {isMobile ? (
+          /* CSS animated shape*/
+          <div className="w-full h-full rounded-full flex items-center justify-center"
+            style={{ background: `radial-gradient(circle, ${color}12 0%, transparent 70%)` }}>
+            <ShapeFallback color={color} index={index} />
+          </div>
+        ) : (
+          visible && (
+            <Canvas
+              frameloop="always"
+              dpr={[1, 1.5]}
+              gl={{ preserveDrawingBuffer: false, alpha: true, antialias: true, powerPreference: "high-performance" }}
+              camera={{ position: [0, 0, 5], fov: 40 }}
+            >
+              <Suspense fallback={<CanvasLoader />}>
+                <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2.5} />
+                <ServiceScene config={config} />
+              </Suspense>
+              <Preload all />
+            </Canvas>
+          )
         )}
         {/* Glow bloom */}
         <div
@@ -159,15 +224,20 @@ const ServiceCard = ({ index }) => {
 
 const About = () => (
   <div className="relative">
+    <span className="font-display absolute -top-6 -left-2 text-[110px] font-black text-white/[0.025] leading-none select-none pointer-events-none hidden lg:block">01</span>
+
     <motion.div variants={textVariant()}>
       <p className={styles.sectionSubText}>Introduction</p>
       <h2 className={styles.sectionHeadText}>About Me.</h2>
     </motion.div>
+
     <motion.div variants={fadeIn("right", "tween", 0.1, 0.6)}
       className="mt-4 mb-8 sm:mb-10 h-[1px] w-full max-w-xs"
       style={{ background: "linear-gradient(90deg, #5ec4ff, transparent)" }} />
+
     {/* Two-column layout — stacks on mobile */}
     <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+
       <motion.div variants={fadeIn("right", "tween", 0.15, 0.75)} className="flex-1 min-w-0 space-y-4 sm:space-y-5">
         <p className="font-body text-[#9d9ab5] text-[15px] sm:text-[16px] leading-[28px] sm:leading-[30px]">
           I&apos;m a <span className="text-white font-medium">detail-oriented Frontend Developer</span> from{" "}
@@ -196,6 +266,8 @@ const About = () => (
           ))}
         </div>
       </motion.div>
+
+      {/* Quick Facts */}
       <motion.div variants={fadeIn("left", "tween", 0.25, 0.75)} className="w-full lg:w-[260px] shrink-0">
         <div className="gradient-border rounded-2xl">
           <div className="bg-[var(--bg-surface)] rounded-2xl p-5 sm:p-6 space-y-4">
@@ -216,6 +288,7 @@ const About = () => (
         </div>
       </motion.div>
     </div>
+
     {/* 3D shapes */}
     <motion.div variants={fadeIn("", "", 0.3, 0.8)}
       className="mt-14 sm:mt-20 flex flex-wrap justify-center gap-8 sm:gap-16">
