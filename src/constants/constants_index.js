@@ -25,6 +25,7 @@ import {
     merchandise,
     vacationCalendar,
     dromeas,
+    spices,
   } from "../assets";
 
   export const navLinks = [
@@ -273,5 +274,21 @@ import {
       ],
       image: restaurantMenu,
       source_code_link: "https://github.com/GrigPasch/Kreta",
+    },
+    {
+      name: "Herbs and Spices Catalog",
+      description:
+        "A product catalog for a family bussiness. Showcases products and means of contact.",
+      tags: [
+        { name: "React.js",        color: "blue-text-color"       },
+        { name: "JavaScript",      color: "javascript-text-color" },
+        { name: "Vite",            color: "orange-text-color"     },
+        { name: "GSAP",            color: "green-text-color"      },
+        { name: "Lenis",           color: "white-text-color"      },
+        { name: "React Router",    color: "pink-text-color"       },
+        { name: "CSS3",            color: "blue-text-color"       },
+      ],
+      image: spices,
+      source_code_link: "https://github.com/GrigPasch/CookMe",
     },
   ];

@@ -32,6 +32,7 @@ import form from "./form.png"
 import restaurantMenu from "./restaurantMenu.png"
 import merchandise from "./merchandise.png"
 import vacationCalendar from "./vacationCalendar.png"
+import spices from "./spices.png"
 
 export {
   logo,
@@ -65,4 +66,5 @@ export {
   merchandise,
   vacationCalendar,
   dromeas,
+  spices,
 };
